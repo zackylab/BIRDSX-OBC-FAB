@@ -384,89 +384,88 @@ ROM Allocation:
 000536  @const1279.call
 00053A  RTC_Function
 0005FA  TIMER1_ISR
-000614  @const1295.call
-000632  RST_EXT_WDT
-000638  MP_CP_BuckBoost
-000652  @delay_ms1
-00067C  MainPic_Power
-0006A6  ComPic_Power
-0006D0  _3V3Power_Line1
-00071E  _3V3Power_Line2
-00076C  _5V0Power_Line
-0007BA  Unreg1_Line
-0007E4  Unreg2_Line
-00080E  Set_RTC
-00082A  MPic_Available
-000830  MPic_Read
-00087C  MPic_flush
-00088A  @PUTCHAR_1_
-0008CE  @PSTRINGC_1080
-0008F6  settings
-0009AA  @DIV88
-0009D6  @PRINTF_D0_1080
-000A92  @PRINTF_D_1080
-000B4E  @PRINTF_LD_1080
-000C4A  printline
-000C60  PRINT_POWER_LINE_STATUS
-000DF6  Print_RTC
-000F0E  @PSTRINGCN_1080
-000F3E  @PRINTF_U_1080
-000FBA  SYSTEM_RESET_24H
-0011A8  @PRINTF_X_1080
-0011F2  CHECK_UART_INCOMING_FROM_MAIN_PIC
-001292  CPic_Available
-00129A  CPic_Read
-0012E6  CHECK_UART_INCOMING_FROM_COM_PIC
-001356  MONITOR_MAIN_PIC_90SEC_COMUNICATION
-001402  MONITOR_COM_PIC_90SEC_COMUNICATION
-00148E  PRINT_RECIVED_COMMAND_FROM_MAIN_PIC
-0014E2  CLEAR_DATA_ARRAY
-001502  Measure_Raw_voltage
-00153C  Measure_3V3_1_current
-001566  Measure_3V3_2_current
-00158E  Measure_5V0_current
-0015B8  Measure_UNREG_1_current
-0015E2  Measure_UNREG_2_current
-00160C  @PUTCHARI_BIU_2
-001618  RESEPOND_TO_MPIC_90SEC_CMD
-00178C  UPDATE_RTC_BY_MAIN_PIC_CMD
-0018D6  POWER_LINE_CONTROL_USING_MAIN_PIC_CMD
-0019A8  SYSTEM_RESET
-001B92  RESET_SATELLITE_CMD
-001BF4  TURN_ON_UNREG_2_LINE_FOR_ANT_DEPLOYMENT
-001CF0  PRINT_RECIVED_COMMAND_FROM_COM_PIC
-001D46  @PUTCHARI_BIU_3
-001D52  RESEPOND_TO_CPIC_90SEC_CMD
-001DD4  UPDATE_RTC_BY_COM_PIC_CMD
-001F2C  SENDING_TIME_TO_COMPIC
-001FAE  @DIV1616
-001FF6  @PUTCHARI_BIU_4
-001FFE  INFORM_WORKING_TO_START_PIC
-002036  @cinit1
-002036  MAIN
-002126  @cinit2
+000616  @const1295.call
+000634  RST_EXT_WDT
+00063A  MP_CP_BuckBoost
+000654  @delay_ms1
+00067E  MainPic_Power
+0006A8  ComPic_Power
+0006D2  _3V3Power_Line1
+000720  _3V3Power_Line2
+00076E  _5V0Power_Line
+0007BC  Unreg1_Line
+0007E6  Unreg2_Line
+000810  Set_RTC
+00082C  MPic_Available
+000832  MPic_Read
+00087E  MPic_flush
+00088C  @PUTCHAR_1_
+0008D0  @PSTRINGC_1080
+0008F8  settings
+0009AE  @DIV88
+0009DA  @PRINTF_D0_1080
+000A96  @PRINTF_D_1080
+000B52  @PRINTF_LD_1080
+000C4E  printline
+000C64  PRINT_POWER_LINE_STATUS
+000DFA  Print_RTC
+000F12  @PSTRINGCN_1080
+000F42  @PRINTF_U_1080
+000FBE  SYSTEM_RESET_24H
+0011AC  @PRINTF_X_1080
+0011F6  CHECK_UART_INCOMING_FROM_MAIN_PIC
+001296  CPic_Available
+00129E  CPic_Read
+0012EA  CHECK_UART_INCOMING_FROM_COM_PIC
+00135A  MONITOR_MAIN_PIC_90SEC_COMUNICATION
+001406  MONITOR_COM_PIC_90SEC_COMUNICATION
+001492  PRINT_RECIVED_COMMAND_FROM_MAIN_PIC
+0014E6  CLEAR_DATA_ARRAY
+001506  Measure_Raw_voltage
+001544  Measure_3V3_1_current
+001572  Measure_3V3_2_current
+00159E  Measure_5V0_current
+0015CC  Measure_UNREG_1_current
+0015FA  Measure_UNREG_2_current
+001628  @PUTCHARI_BIU_2
+001634  RESEPOND_TO_MPIC_90SEC_CMD
+0017A2  UPDATE_RTC_BY_MAIN_PIC_CMD
+0018EC  POWER_LINE_CONTROL_USING_MAIN_PIC_CMD
+0019BE  SYSTEM_RESET
+001BA8  RESET_SATELLITE_CMD
+001C0A  TURN_ON_UNREG_2_LINE_FOR_ANT_DEPLOYMENT
+001D06  PRINT_RECIVED_COMMAND_FROM_COM_PIC
+001D5C  @PUTCHARI_BIU_3
+001D68  RESEPOND_TO_CPIC_90SEC_CMD
+001DEA  UPDATE_RTC_BY_COM_PIC_CMD
+001F42  SENDING_TIME_TO_COMPIC
+001FC4  @DIV1616
+00200C  @PUTCHARI_BIU_4
+002014  INFORM_WORKING_TO_START_PIC
+00204C  @cinit1
+00204C  MAIN
+00214C  @cinit2
 
 Project Directory:
-    J:\My Drive\OBC\OBC&MissionBoss Codes\RESET_PIC\V4.3\
+    C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Reset_PIC\
 
 Project Files:
-    ResetMain.c                                             [17-Jan-24 18:32  CRC=A4F2F1CD]
-    C:\Program Files (x86)\PICC\Devices\18F67J94.h          [21-Oct-22 11:10  CRC=4A39F86D]
-    PIC18F67J94_REGISTERS.h                                 [12-Aug-20 21:39  CRC=C1EF16FD]
-    ResetPIC_Functions.c                                    [17-Jan-24 18:37  CRC=3977B5E6]
-    ADC_Power_Lines_Control.c                               [20-Jan-24 02:27  CRC=60C94C58]
-    RPIC_MPIC.c                                             [16-Jan-24 11:28  CRC=6552EC86]
-    RPIC_CPIC.c                                             [12-Dec-23 16:12  CRC=C94175F2]
-    RPIC_STARTPIC.c                                         [15-Jan-24 12:41  CRC=95901BB6]
-    RTC_fun.c                                               [13-Jan-24 13:26  CRC=8283AF8A]
+    ResetMain.c                                             [18-7-25 15:11  CRC=A4F2F1CD]
+    ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\18F67J94.h [18-12-24 13:54  CRC=E0DE9FF2]
+    PIC18F67J94_REGISTERS.h                                 [18-7-25 15:11  CRC=C1EF16FD]
+    ResetPIC_Functions.c                                    [18-7-25 15:11  CRC=3977B5E6]
+    ADC_Power_Lines_Control.c                               [18-7-25 15:11  CRC=60C94C58]
+    RPIC_MPIC.c                                             [18-7-25 15:11  CRC=6552EC86]
+    RPIC_CPIC.c                                             [18-7-25 15:11  CRC=C94175F2]
+    RPIC_STARTPIC.c                                         [18-7-25 15:11  CRC=95901BB6]
+    RTC_fun.c                                               [18-7-25 15:11  CRC=8283AF8A]
 
-Source signature=1488E0B7
+Source signature=AB2D883C
 Program memory checksum=0000
-Program memory CRC=0000
-Hex file CRC=83FD
+Hex file CRC=ADFD
 
 Units:
-    ResetMain (main)
+    C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Reset_PIC\ResetMain (main)
 
 Compiler Settings:
     Processor:      PIC18F67J94
@@ -475,7 +474,10 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
-    Compile Mode:       CCS5
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
 Output Files:
     XREF file:   ResetMain.xsym

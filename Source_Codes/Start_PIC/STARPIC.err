@@ -1,4 +1,8 @@
-Compiling J:\My Drive\OBC\OBC&MissionBoss Codes\START_PIC\START_PIC_V1.3\STARPIC on 24-Jan-24 at 00:19
+Compiling C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Start_PIC\STARPIC on 18-7-25 at 16:06
+*** Error 24 "C:\Program Files (x86)\PICCDEMO\Devices\16F1789.h" Line 11(9,19): Unknown device type    -- Try PCM
+      1 Errors,  0 Warnings.
+Build Failed.
+Compiling C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Start_PIC\STARPIC on 18-7-25 at 16:06
       Memory usage:   ROM=4%      RAM=3% - 4%
       0 Errors,  0 Warnings.
 Build Successful.

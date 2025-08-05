@@ -2,7 +2,7 @@
 forcecoff=0
 
 [ProjectLog]
-Days=73
+Days=76
 D1=26-10-2023
 D1_L=5
 D1_L1=[52999]Project Opened.
@@ -986,10 +986,22 @@ D73=03-06-2024
 D73_L=2
 D73_L1=[47591]Project Opened.
 D73_L2=[50132]Project Closed.
+D74=18-07-2025
+D74_L=2
+D74_L1=[57391]Project Opened.
+D74_L2=[57856]Project Closed.
+D75=29-07-2025
+D75_L=2
+D75_L1=[49577]Project Opened.
+D75_L2=[50284]Project Closed.
+D76=04-08-2025
+D76_L=2
+D76_L1=[82727]Project Opened.
+D76_L2=[82761]Project Closed.
 [PROJECT]
 Target=MainPICmain.hex
 Processor_Text=PIC18F67J94
-CCSVersion=5.078
+CCSVersion=5.119d
 Compiler=PCH
 [Target Data]
 FileList=MainPICmain.c
@@ -999,7 +1011,7 @@ Type=4
 1=MainPICmain.c
 
 [defines]
-buildcount=555
+buildcount=557
 
 [Opened Files]
 1=MainPICmain.c

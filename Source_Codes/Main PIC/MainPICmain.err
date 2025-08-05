@@ -1,4 +1,8 @@
-Compiling G:\マイドライブ\OBC\OBC&MissionBoss Codes\MAIN_PIC\MP V7.7\MainPICmain on 06-3-24 at 22:00
+Compiling C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Main PIC\MainPICmain on 29-7-25 at 13:46
+*** Error 24 "C:\Program Files (x86)\PICCDEMO\Devices\18F67J94.h" Line 11(9,20): Unknown device type    -- Try PCH
+      1 Errors,  0 Warnings.
+Build Failed.
+Compiling C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Main PIC\MainPICmain on 29-7-25 at 13:46
       Memory usage:   ROM=35%      RAM=29% - 31%
       0 Errors,  0 Warnings.
 Build Successful.

@@ -1,7 +1,7 @@
 [PROJECT]
 Target=ResetMain.hex
 Processor_Text=PIC18F67J94
-CCSVersion=5.078
+CCSVersion=5.119d
 Compiler=PCH
 [Target Data]
 FileList=ResetMain.c
@@ -11,10 +11,10 @@ Type=4
 1=ResetMain.c
 
 [defines]
-buildcount=323
+buildcount=324
 
 [ProjectLog]
-Days=59
+Days=60
 D1=17-08-2023
 D1_L=7
 D1_L1=[52747]Project Closed.
@@ -759,6 +759,10 @@ D59=06-03-2024
 D59_L=2
 D59_L1=[63284]Project Opened.
 D59_L2=[63391]Project Closed.
+D60=18-07-2025
+D60_L=2
+D60_L1=[57929]Project Opened.
+D60_L2=[57975]Project Closed.
 
 [fileformats]
 forcecoff=0

@@ -1,7 +1,7 @@
 [PROJECT]
 Target=STARPIC.hex
 Processor_Text=PIC16F1789
-CCSVersion=5.078
+CCSVersion=5.119d
 Compiler=PCM
 [Target Data]
 FileList=STARPIC.c
@@ -11,7 +11,7 @@ Type=4
 1=STARPIC.c
 
 [defines]
-buildcount=178
+buildcount=179
 
 [Opened Files]
 1=STARPIC.c
@@ -23,7 +23,7 @@ Count=2
 t3=1
 
 [ProjectLog]
-Days=14
+Days=16
 D1=26-07-2023
 D1_L=4
 D1_L1=[34252]Stopped Editing.
@@ -195,6 +195,14 @@ D14_L1=[50945]Project Opened.
 D14_L2=[51543]Project Closed.
 D14_L3=[56072]Project Opened.
 D14_L4=[58930]Project Closed.
+D15=18-07-2025
+D15_L=2
+D15_L1=[57975]Project Opened.
+D15_L2=[58039]Project Closed.
+D16=29-07-2025
+D16_L=2
+D16_L1=[49359]Project Opened.
+D16_L2=[49577]Project Closed.
 
 [fileformats]
 forcecoff=0

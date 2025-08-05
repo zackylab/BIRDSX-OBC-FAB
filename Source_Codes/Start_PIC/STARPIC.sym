@@ -162,20 +162,19 @@ ROM Allocation:
 000253  @cinit2
 
 Project Directory:
-    J:\My Drive\OBC\OBC&MissionBoss Codes\START_PIC\START_PIC_V1.3\
+    C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Start_PIC\
 
 Project Files:
-    STARPIC.c                                               [17-Jan-24 18:16  CRC=52A6AD01]
-    C:\Program Files (x86)\PICC\Devices\16F1789.h           [21-Oct-22 11:03  CRC=C9569A7C]
-    StartPIc_Funtions.c                                     [15-Jan-24 11:39  CRC=232624C8]
+    STARPIC.c                                               [18-7-25 15:11  CRC=52A6AD01]
+    ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F1789.h [18-12-24 13:49  CRC=CFFA99ED]
+    StartPIc_Funtions.c                                     [18-7-25 15:11  CRC=232624C8]
 
-Source signature=6249910D
+Source signature=68ED907E
 Program memory checksum=0000
-Program memory CRC=0000
 Hex file CRC=EFE5
 
 Units:
-    STARPIC (main)
+    C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Start_PIC\STARPIC (main)
 
 Compiler Settings:
     Processor:      PIC16F1789
@@ -185,7 +184,10 @@ Compiler Settings:
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
     Enhanced 16:    Yes
-    Compile Mode:       CCS5
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
 Output Files:
     XREF file:   STARPIC.xsym

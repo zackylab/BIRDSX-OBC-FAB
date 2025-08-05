@@ -1,9 +1,9 @@
 
-ROM used:   45790/131056 (35%)
-            45790/131056 (35%) including unused fragments
+ROM used:   45944/131056 (35%)
+            45944/131056 (35%) including unused fragments
 
-            7.7 Average locations per line
-            23.9 Average locations per statement
+            7.6 Average locations per line
+            24.0 Average locations per statement
 
 RAM used:   1022/3578 (29%) at main() level
             1108/3578 (31%) worst case
@@ -14,12 +14,12 @@ Stack size: 31
 Lines Stmts  %   Files
 ----- ----- ---  -----
   202    63   3  MainPICmain.c
- 1454     0   0  C:\Program Files (x86)\PICC\Devices\18F67J94.h
+ 1489     0   0  ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\18F67J94.h
   150     0   0  PIC18F67J94_REGISTERS.h
-   37     0   0  C:\Program Files (x86)\PICC\Drivers\stdio.h
-  435   129   7  C:\Program Files (x86)\PICC\Drivers\string.h
-   32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
-   28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
+   37     0   0  ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Drivers\stdio.h
+  435   129   7  ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Drivers\string.h
+   32     0   0  ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Drivers\stddef.h
+   28     0   0  ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Drivers\ctype.h
   373   108   6  MainPIC_Settings.c
   223   158   8  RTC_functions.c
   724   255  13  Flash_Memory.c
@@ -30,7 +30,7 @@ Lines Stmts  %   Files
   460   273  14  MPIC_CPIC.c
   310   172   9  Debug.c
 ----- -----
- 5976  1914 Total
+ 6011  1914 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -62,343 +62,343 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     70   0    2             @PRINTF_X_115200_31766_31767
 0     44   0    3             @DIV88
 0     32   0    6    131  4.5  CLEAR_DATA_ARRAY
-0     42   0    1    139  2.3  RTC_WRITE_ENABLE
+0     46   0    1    139  2.3  RTC_WRITE_ENABLE
 0    500   1   11   2117  5.7  WRITE_OBC_RTC
 0     18   0    0             @BCD2BYTE
-0     18   0    0             @const1222
+0     18   0    0             @const1301
 0     42   0    3             @PSTRINGC_115200_31766_31767
 0    194   0    6             @PRINTF_D0_115200_31766_31767
 0    462   1    9   1331  7.7  READ_MP_RTC_AND_PRINT
-0      8   0    0             @const1240
+0      8   0    0             @const1319
 0     50   0    4             @PSTRINGCN_115200_31766_31767
 0    130   0    2             @PRINTF_U_115200_31766_31767
 0    180   0    9             @PRINTF_LU_115200_31766_31767
 0    494   1    8   2055  6.0  GET_DAY_NUMBER_OF_THE_YEAR
 0     72   0    9    228  2.6  READ_MP_RTC_
-0     60   0    5             @SPI_XFER_1
-0     60   0    5             @SPI_XFER_2
-0     60   0    5             @SPI_XFER_3
-0     24   0    0     69  1.9  MAIN_FM_WRITE_ENABLE
-0     24   0    0     69  1.9  COM_FM_WRITE_ENABLE
-0     26   0    0     69  1.9  MSN_FM_WRITE_ENABLE
-0    192   0   12    964  5.9  MAIN_FM_SECTOR_ERASE
-0    192   0   12    971  6.0  COM_FM_SECTOR_ERASE
-0    194   0   12    971  6.0  MSN_FM_SECTOR_ERASE
-0    136   0   10    738  5.1  MAIN_FM_BYTE_WRITE
-0    124   0   10    738  5.1  COM_FM_BYTE_WRITE
-0    132   0    9    700  4.9  MAIN_FM_BYTE_READ
-0    132   0    9    700  4.9  COM_FM_BYTE_READ
-0    132   0    9    705  4.8  MSN_FM_BYTE_READ
+0     60   0    6             @SPI_XFER_1
+0     60   0    6             @SPI_XFER_2
+0     60   0    6             @SPI_XFER_3
+0     28   0    0     69  1.9  MAIN_FM_WRITE_ENABLE
+0     28   0    0     69  1.9  COM_FM_WRITE_ENABLE
+0     30   0    0     69  1.9  MSN_FM_WRITE_ENABLE
+0    222   0   12    964  5.9  MAIN_FM_SECTOR_ERASE
+0    220   0   12    971  6.0  COM_FM_SECTOR_ERASE
+0    222   0   12    971  6.0  MSN_FM_SECTOR_ERASE
+0    160   0   10    738  5.1  MAIN_FM_BYTE_WRITE
+0    148   0   10    738  5.1  COM_FM_BYTE_WRITE
+0    154   0    9    700  4.9  MAIN_FM_BYTE_READ
+0    154   0    9    700  4.9  COM_FM_BYTE_READ
+0    154   0    9    705  4.8  MSN_FM_BYTE_READ
 0    222   0   20    354  4.8  DATA_COPY_FROM_MSN_FM_TO_CFM
 0    216   0   20    302  4.8  DATA_COPY_FROM_MAIN_FM_TO_CFM
-0   1276   1   16   1525  6.9  _LOAD_RESERVATION_COMMANDS_ON_OFF_TIME_AT_BOOT
-0     24   0    0             @const1355
-0     54   0    0             @const1358
-0     54   0    0             @const1359
+0   1272   1   16   1525  6.9  _LOAD_RESERVATION_COMMANDS_ON_OFF_TIME_AT_BOOT
+0     24   0    0             @const1437
+0     54   0    0             @const1440
+0     54   0    0             @const1441
 0    144   0    0    193  1.4  LOAD_RESERVATION_COMMANDS_ON_OFF_TIME_AT_BOOT
-0    994   1   25   2222  7.2  _CHECK_RESERVATION_COMMAND_ON_TIME_AND_OFF_TIME
-0     48   0    0             @const1365
-0     38   0    0             @const1370
+0    990   1   25   2222  7.2  _CHECK_RESERVATION_COMMAND_ON_TIME_AND_OFF_TIME
+0     48   0    0             @const1447
+0     38   0    0             @const1452
 0    144   0    0    193  1.4  CHECK_RESERVATION_COMMAND_ON_TIME_AND_OFF_TIME
 0    614   1   16   1308  6.6  WRITING_CMD
-0     24   0    0             @const1378
+0     24   0    0             @const1460
 0    302   0    2    797  4.3  WRITE_GS_CMD_IN_RESERVATION_LOCATION
-0     32   0    0             @const1383
-0     28   0    0             @const1384
+0     32   0    0             @const1465
+0     28   0    0             @const1466
 0    476   1   23    557  7.2  _RESTARTING_MISSIONS_AFTER_SYSTEM_RESET
-0     86   0    0             @const1389
-0     50   0    0             @const1391
+0     86   0    0             @const1471
+0     50   0    0             @const1473
 0    292   0    0    362  2.8  RESTARTING_MISSIONS_AFTER_SYSTEM_RESET
 0    112   0    4    315  5.8  CHECK_UART_INCOMING_FROM_RESET_PIC
 0     78   0    2    166  3.8  PRINT_RECIVED_COMMAND_FROM_RESET_PIC
-0     24   0    0             @const1397
+0     24   0    0             @const1479
 0    306   0   10    886  7.6  COMUNICATION_WITH_RST_PIC_AND_WAIT_FOR_RESPONE
-0     46   0    0             @const1406
+0     46   0    0             @const1488
 0    194   0    6             @PRINTF_D_115200_31766_31767
-0     32   0    0             @const1411
-0     44   0    0             @const1412
+0     32   0    0             @const1493
+0     44   0    0             @const1494
 0    344   0    9    756  5.2  SYNC_MAIN_PIC_AND_RESET_PIC_TIME
-0     50   0    0             @const1417
-0     16   0    0             @const1418
+0     50   0    0             @const1499
+0     16   0    0             @const1500
 0    246   0   11             @MULFF
 0    100   0   12    116  5.0  CHECK_SUNSHINE
 0    124   0   10             @FLT
-0    500   1    6   2456  7.8  GENARATE_CW_DATA
-0     20   0    0             @const1452
+0    496   1    6   2456  7.8  GENARATE_CW_DATA
+0     20   0    0             @const1534
 0  11026  12   63  15997 10.1  COMUNICATION_WITH_RST_PIC_90SEC
-0     30   0    0             @const1459
-0     22   0    0             @const1462
+0     30   0    0             @const1541
+0     22   0    0             @const1544
 0    148   0   13             @DIV3232
 0    188   0   12             @PRINTF_L32U_115200_31766_31767
-0     56   0    0             @const1468
-0     56   0    0             @const1469
-0     52   0    0             @const1470
+0     56   0    0             @const1550
+0     56   0    0             @const1551
+0     52   0    0             @const1552
 0    270   0   12             @PRINTF_L32D_115200_31766_31767
 0     92   0   14             @MUL3232
-0     64   0    0             @const1478
-0     28   0    0             @const1479
-0     88   0    0             @const1482
-0     60   0    0             @const1483
-0     52   0    0             @const1484
-0     68   0    0             @const1486
-0     26   0    0             @const1489
-0     86   0    0             @const1492
-0     58   0    0             @const1493
-0     30   0    0             @const1494
-0     50   0    0             @const1495
+0     64   0    0             @const1560
+0     28   0    0             @const1561
+0     88   0    0             @const1564
+0     60   0    0             @const1565
+0     52   0    0             @const1566
+0     68   0    0             @const1568
+0     26   0    0             @const1571
+0     86   0    0             @const1574
+0     58   0    0             @const1575
+0     30   0    0             @const1576
+0     50   0    0             @const1577
 0     54   0    2             @ITOF
 0    350   0   14             @DIVFF
-0     24   0    0             @const1502
+0     24   0    0             @const1584
 0     68   0    5             @FTOSD
 0    418   0   13             @PRINTF_L32D_115200_31766_31767FPFPF
 0    632   1   16             @ADDFF
-0     26   0    0             @const1512
-0     26   0    0             @const1514
-0     24   0    0             @const1516
-0     26   0    0             @const1518
-0     26   0    0             @const1520
-0     28   0    0             @const1521
-0     28   0    0             @const1522
-0     26   0    0             @const1523
-0     26   0    0             @const1524
-0     28   0    0             @const1525
-0     20   0    0             @const1527
-0     16   0    0             @const1529
-0     20   0    0             @const1530
-0     18   0    0             @const1531
-0     26   0    0             @const1532
-0     18   0    0             @const1533
-0     20   0    0             @const1534
-0     16   0    0             @const1535
-0     20   0    0             @const1536
-0     18   0    0             @const1537
-0     16   0    0             @const1538
-0     20   0    0             @const1539
-0     18   0    0             @const1540
-0     16   0    0             @const1541
-0     20   0    0             @const1542
-0     18   0    0             @const1543
-0     16   0    0             @const1544
-0     20   0    0             @const1545
-0     18   0    0             @const1546
-0     16   0    0             @const1547
-0     20   0    0             @const1548
-0     18   0    0             @const1549
-0     16   0    0             @const1550
-0     20   0    0             @const1551
-0     18   0    0             @const1552
-0     16   0    0             @const1553
-0     26   0    0             @const1554
-0     24   0    0             @const1555
-0     24   0    0             @const1556
-0     24   0    0             @const1557
-0     24   0    0    769  5.2  @const1558
-0    158   0    6    769  5.2  SET_RESET_PIC_TIME
-0     26   0    0             @const1566
-0     30   0    0    698  5.0  @const1567
-0     58   0    0             @const1573
-0     34   0    0             @const1574
-0     28   0    0   2486  7.7  @const1575
-0   1598   2   12   2486  7.7  DEPLOY_ANTENNAS_SET_1
-0     18   0    0             @const1579
-0     28   0    0             @const1580
-0     60   0    0             @const1585
-0     28   0    0             @const1586
-0     24   0    0             @const1587
-0     28   0    0             @const1588
-0     24   0    0             @const1589
-0     32   0    0             @const1590
-0     36   0    0             @const1591
-0     36   0    0             @const1593
-0     32   0    0             @const1594
-0     22   0    0             @FLASHLOAD
-0     60   0    0             @const1596
-0     28   0    0             @const1597
+0     26   0    0             @const1594
+0     26   0    0             @const1596
 0     24   0    0             @const1598
-0     28   0    0             @const1599
-0     24   0    0   2328  7.7  @const1600
-0   1482   2   12   2328  7.7  DEPLOY_ANTENNAS_SET_2
+0     26   0    0             @const1600
+0     26   0    0             @const1602
+0     28   0    0             @const1603
 0     28   0    0             @const1604
-0     60   0    0             @const1609
-0     28   0    0             @const1610
-0     24   0    0             @const1611
-0     28   0    0             @const1612
-0     24   0    0             @const1613
-0     36   0    0             @const1614
-0     36   0    0             @const1616
-0     32   0    0             @const1617
-0     60   0    0             @const1618
-0     28   0    0             @const1619
-0     24   0    0             @const1620
-0     28   0    0             @const1621
-0     24   0    0    757  4.3  @const1622
+0     26   0    0             @const1605
+0     26   0    0             @const1606
+0     28   0    0             @const1607
+0     20   0    0             @const1609
+0     16   0    0             @const1611
+0     20   0    0             @const1612
+0     18   0    0             @const1613
+0     26   0    0             @const1614
+0     18   0    0             @const1615
+0     20   0    0             @const1616
+0     16   0    0             @const1617
+0     20   0    0             @const1618
+0     18   0    0             @const1619
+0     16   0    0             @const1620
+0     20   0    0             @const1621
+0     18   0    0             @const1622
+0     16   0    0             @const1623
+0     20   0    0             @const1624
+0     18   0    0             @const1625
+0     16   0    0             @const1626
+0     20   0    0             @const1627
+0     18   0    0             @const1628
+0     16   0    0             @const1629
+0     20   0    0             @const1630
+0     18   0    0             @const1631
+0     16   0    0             @const1632
+0     20   0    0             @const1633
+0     18   0    0             @const1634
+0     16   0    0             @const1635
+0     26   0    0             @const1636
+0     24   0    0             @const1637
+0     24   0    0             @const1638
+0     24   0    0             @const1639
+0     24   0    0             @const1640
+0    158   0    6    769  5.2  SET_RESET_PIC_TIME
+0     26   0    0             @const1648
+0     30   0    0             @const1649
+0     58   0    0             @const1655
+0     34   0    0             @const1656
+0     28   0    0             @const1657
+0   1590   2   12   2486  7.7  DEPLOY_ANTENNAS_SET_1
+0     18   0    0             @const1661
+0     28   0    0             @const1662
+0     60   0    0             @const1667
+0     28   0    0             @const1668
+0     24   0    0             @const1669
+0     28   0    0             @const1670
+0     24   0    0             @const1671
+0     32   0    0             @const1672
+0     36   0    0             @const1673
+0     36   0    0             @const1675
+0     32   0    0             @const1676
+0     22   0    0             @FLASHLOAD
+0     60   0    0             @const1678
+0     28   0    0             @const1679
+0     24   0    0             @const1680
+0     28   0    0             @const1681
+0     24   0    0             @const1682
+0   1474   2   12   2328  7.7  DEPLOY_ANTENNAS_SET_2
+0     28   0    0             @const1686
+0     60   0    0             @const1691
+0     28   0    0             @const1692
+0     24   0    0             @const1693
+0     28   0    0             @const1694
+0     24   0    0             @const1695
+0     36   0    0             @const1696
+0     36   0    0             @const1698
+0     32   0    0             @const1699
+0     60   0    0             @const1700
+0     28   0    0             @const1701
+0     24   0    0             @const1702
+0     28   0    0             @const1703
+0     24   0    0             @const1704
 0    614   1    1    757  4.3  LOAD_ANTENNA_DEPLOYMENT_VALUES
-0     34   0    0             @const1624
-0     28   0    0             @const1625
-0     24   0    0             @const1626
-0     28   0    0             @const1627
-0     24   0    0             @const1628
-0     38   0    0             @const1629
-0     34   0    0    315  5.8  @const1630
+0     34   0    0             @const1706
+0     28   0    0             @const1707
+0     24   0    0             @const1708
+0     28   0    0             @const1709
+0     24   0    0             @const1710
+0     38   0    0             @const1711
+0     34   0    0             @const1712
 0    114   0    4    315  5.8  CHECK_UART_INCOMING_FROM_FAB_PIC
 0     82   0    2    183  3.8  PRINT_RECIVED_COMMAND_FROM_FAB_PIC
-0     34   0    0             @const1635
+0     34   0    0             @const1717
 0    340   0   10    908  8.3  COMUNICATION_WITH_FAB_PIC_AND_WAIT_FOR_RESPONE
-0     44   0    0             @const1639
-0     26   0    0             @const1641
-0     42   0    0             @const1642
+0     44   0    0             @const1721
+0     26   0    0             @const1723
+0     42   0    0             @const1724
 0    128   0    0    384  4.6  _CLOSE_FAB_KILL_SWITCH
-0     38   0    0             @const1646
-0     40   0    0    493  4.7  @const1647
+0     38   0    0             @const1728
+0     40   0    0             @const1729
 0    162   0    1    493  4.7  _CLOSE_OBC_KILL_SWITCH
-0     38   0    0             @const1649
-0     40   0    0    384  4.6  @const1650
+0     38   0    0             @const1731
+0     40   0    0             @const1732
 0    124   0    0    384  4.6  _OPEN_FAB_KILL_SWITCH
-0     48   0    0             @const1652
-0     38   0    0    546  4.7  @const1653
+0     48   0    0             @const1734
+0     38   0    0             @const1735
 0    182   0    1    546  4.7  _OPEN_OBC_KILL_SWITCH
-0     48   0    0             @const1655
-0     22   0    0             @const1656
-0     38   0    0    548  7.0  @const1657
+0     48   0    0             @const1737
+0     22   0    0             @const1738
+0     38   0    0             @const1739
 0    224   0   14    548  7.0  CHECK_UART_INCOMING_FROM_MBOSS_PIC
-0     38   0    0             @const1665
-0     18   0    0             @const1666
-0     38   0    0             @const1670
-0     20   0    0             @const1685
-0     26   0    0             @const1691
+0     38   0    0             @const1747
+0     18   0    0             @const1748
+0     38   0    0             @const1752
+0     20   0    0             @const1767
+0     26   0    0             @const1773
 0     16   0    0     33  1.3  TURN_ON_MISSIONBOSS
 0     22   0    0     43  1.3  GIVE_SFM_ACCESS_TO_MISSIONBOSS
-0     32   0    0     43  1.3  @const1696
+0     32   0    0             @const1778
 0     22   0    0     43  1.3  STOP_SFM_ACCESS_TO_MISSIONBOSS
-0     32   0    0    165  2.7  @const1698
+0     32   0    0             @const1780
 0    456   0    6   1485  6.9  SEND_APRS_COMMAND_TO_MISSIONBOSS_THROUGH_MAIN
-0     40   0    0             @const1702
-0     14   0    0             @const1704
+0     40   0    0             @const1784
+0     14   0    0             @const1786
 0    112   0    4    315  5.8  CHECK_UART_INCOMING_FROM_COM_PIC
 0     84   0    2    183  3.8  PRINT_RECIVED_COMMAND_FROM_COM_PIC
-0     26   0    0             @const1711
-0     44   0    0             @const1720
-0     36   0    0             @const1722
-0     42   0    0             @const1725
+0     26   0    0             @const1793
+0     44   0    0             @const1802
+0     36   0    0             @const1804
+0     42   0    0             @const1807
 0    166   0    2    489  5.6  GIVE_COMFM_ACCESS_TO_COMPIC_FOR_DATA_DOWNLOAD
-0     62   0    0    975  6.9  @const1729
-0    316   0    6    975  6.9  GIVE_CW_DATA_TO_COM_PIC
-0     26   0    0             @const1731
-0     32   0    0             @const1733
-0     34   0    0             @const1735
-0     16   0    0             @const1736
+0     62   0    0             @const1811
+0    314   0    6    975  6.9  GIVE_CW_DATA_TO_COM_PIC
+0     26   0    0             @const1813
+0     32   0    0             @const1815
+0     34   0    0             @const1817
+0     16   0    0             @const1818
 0     42   0    0    117  2.7  CHECK_COMFM_ACCES_RELEASING
-0     36   0    0   1250  6.5  @const1740
+0     36   0    0             @const1822
 0    364   0   12   1250  6.5  DATA_COPY_FROM_MSN_FM_TO_CFM_USING_GS_CMD
-0     44   0    0             @const1742
+0     44   0    0             @const1824
 0     34   0    5             @MUL1616
-0     22   0    0             @const1749
-0     40   0    0             @const1750
-0     32   0    0   1205  6.5  @const1751
+0     22   0    0             @const1831
+0     40   0    0             @const1832
+0     32   0    0             @const1833
 0    360   0   12   1205  6.5  DATA_COPY_FROM_MAIN_FM_TO_CFM_USING_GS_CMD
-0     46   0    0             @const1754
-0     22   0    0             @const1758
-0     42   0    0             @const1759
-0     34   0    0   1114  6.4  @const1760
+0     46   0    0             @const1836
+0     22   0    0             @const1840
+0     42   0    0             @const1841
+0     34   0    0             @const1842
 0    334   0    7   1114  6.4  SECTOR_ERASE_USING_GS_COMMAND
-0     32   0    0             @const1763
-0     22   0    0             @const1767
-0     24   0    0             @const1768
-0     22   0    0   1419  6.4  @const1769
+0     32   0    0             @const1845
+0     22   0    0             @const1849
+0     24   0    0             @const1850
+0     22   0    0             @const1851
 0    392   0    5   1419  6.4  CONTROL_KILL_SWITCHES
-0     28   0    0             @const1773
-0     36   0    0             @const1774
-0     36   0    0   1351  6.9  @const1775
+0     28   0    0             @const1855
+0     36   0    0             @const1856
+0     36   0    0             @const1857
 0    382   0    3   1351  6.9  DEPLOY_ANTENNA_USING_GS_COMMAND
-0     34   0    0             @const1779
-0     36   0    0             @const1781
-0     36   0    0             @const1782
-0     36   0    0             @const1784
-0     30   0    0   1197  6.2  @const1785
-0    816   1    3   1197  6.2  SET_ANTENNA_VALUES_USING_GS_COMMAND
-0     38   0    0             @const1787
-0     36   0    0             @const1789
-0     28   0    0             @const1790
-0     24   0    0             @const1791
-0     28   0    0             @const1792
-0     24   0    0     63  1.8  @const1793
+0     34   0    0             @const1861
+0     36   0    0             @const1863
+0     36   0    0             @const1864
+0     36   0    0             @const1866
+0     30   0    0             @const1867
+0    808   1    3   1197  6.2  SET_ANTENNA_VALUES_USING_GS_COMMAND
+0     38   0    0             @const1869
+0     36   0    0             @const1871
+0     28   0    0             @const1872
+0     24   0    0             @const1873
+0     28   0    0             @const1874
+0     24   0    0             @const1875
 0     86   0    0     63  1.8  LOAD_30DAY_COUNTER
-0     26   0    0    247  3.9  @const1795
+0     26   0    0             @const1877
 0    186   0    0    247  3.9  INCREACE_30DAY_COUNTER_ONCE_PER_DAY_AND_CHECK_30DAY_CW_STATUS
-0     38   0    0             @const1797
-0     42   0    0    140  3.5  @const1798
+0     38   0    0             @const1879
+0     42   0    0             @const1880
 0     74   0    0    140  3.5  RESET_30DAY_CONTER
 0    112   0    4    315  5.8  CHECK_UART_INCOMING_FROM_DEBUG_PORT
 0     84   0    2    183  3.8  PRINT_RECIVED_COMMAND_FROM_DEBUG_PORT
-0     38   0    0             @const1804
+0     38   0    0             @const1886
 0    324   0    2   1083  6.3  DEPLOY_ANTENNA_INSTANTLY
-0     36   0    0             @const1808
-0     36   0    0             @const1809
-0     36   0    0             @const1811
-0     30   0    0   1014  5.7  @const1812
-0    778   1    2   1014  5.7  SET_UP_ANTENNA_DEPLOYMENT_VALUES
-0     60   0    0             @const1814
-0     36   0    0             @const1815
-0     28   0    0             @const1816
-0     24   0    0             @const1817
-0     28   0    0             @const1818
-0     24   0    0             @const1819
-0     38   0    0    307  3.1  @const1820
+0     36   0    0             @const1890
+0     36   0    0             @const1891
+0     36   0    0             @const1893
+0     30   0    0             @const1894
+0    754   1    2   1014  5.7  SET_UP_ANTENNA_DEPLOYMENT_VALUES
+0     60   0    0             @const1896
+0     36   0    0             @const1897
+0     28   0    0             @const1898
+0     24   0    0             @const1899
+0     28   0    0             @const1900
+0     24   0    0             @const1901
+0     38   0    0             @const1902
 0    486   1    2    307  3.1  GET_ANTENNA_DEPLOYMENT_VALUES
-0     28   0    0             @const1822
-0     28   0    0             @const1823
-0     24   0    0             @const1824
-0     28   0    0             @const1825
-0     24   0    0    204  3.0  @const1826
+0     28   0    0             @const1904
+0     28   0    0             @const1905
+0     24   0    0             @const1906
+0     28   0    0             @const1907
+0     24   0    0             @const1908
 0     52   0    0    204  3.0  UPDATE_RESET_PIC_TIME
-0     30   0    0     78  2.5  @const1828
+0     30   0    0             @const1910
 0     30   0    0     78  2.5  CLOSE_FAB_KILL_SWITCH_DB
-0     44   0    0     78  2.5  @const1830
+0     44   0    0             @const1912
 0     30   0    0     78  2.5  CLOSE_OBC_KILL_SWITCH_DB
-0     44   0    0     78  2.5  @const1832
+0     44   0    0             @const1914
 0     30   0    0     78  2.5  OPEN_FAB_KILL_SWITCH_DB
-0     42   0    0     78  2.5  @const1834
+0     42   0    0             @const1916
 0     30   0    0     78  2.5  OPEN_OBC_KILL_SWITCH_DB
-0     42   0    0    777  4.8  @const1836
+0     42   0    0             @const1918
 0    192   0    0    777  4.8  POWER_LINE_CONTROL_USING_DEBUG_COMMAND_TO_RST_PIC
-0     58   0    0             @const1838
-0     34   0    0             @const1839
-0     28   0    0    474  4.2  @const1840
+0     58   0    0             @const1920
+0     34   0    0             @const1921
+0     28   0    0             @const1922
 0    144   0    0    474  4.2  RESET_SATELLITE_CMD
-0     38   0    0             @const1842
-0     30   0    0    273  5.3  @const1843
+0     38   0    0             @const1924
+0     30   0    0             @const1925
 0    104   0    4    273  5.3  SEND_COM_CMD_THROUGH_PC
-0     36   0    0   1521  7.3  @const1845
-0    866   1   20   1521  7.3  READ_FM_DATA_THROUGH_PC
-0     22   0    0             @const1848
-0     20   0    0             @const1853
-0     16   0    0             @const1854
-0     16   0    0             @const1856
-0     20   0    0             @const1858
-0     14   0    0             @const1859
+0     36   0    0             @const1927
+0    850   1   20   1521  7.3  READ_FM_DATA_THROUGH_PC
+0     22   0    0             @const1930
+0     20   0    0             @const1935
+0     16   0    0             @const1936
+0     16   0    0             @const1938
+0     20   0    0             @const1940
+0     14   0    0             @const1941
 0     84   0    0    310  2.3  setting
-0    916   1    1   1227  4.8  MAIN
-0     30   0    0             @const1865
+0    932   1    1   1227  4.8  MAIN
+0     30   0    0             @const1947
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               127
+    Functions               94
     Statements              1914
-    Comments                1456
-    Volume (V)              187151
-    Difficulty (D)          602.6
-    Effort to implement (E) 112777495
-    Time to implement (T)   1740 hours, 24 minutes
-    Est Delivered Bugs (B)  78
-    Cyclomatic Complexity   331
-    Maintainability (MI)    45
+    Comments                1457
+    Volume (V)              135029
+    Difficulty (D)          435.2
+    Effort to implement (E) 58770260
+    Time to implement (T)   906 hours, 57 minutes
+    Est Delivered Bugs (B)  50
+    Cyclomatic Complexity   245
+    Maintainability (MI)    75
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00004     6  0  
 00006-00006     0  2  
 00008-000E0   218  0  
-000E2-0FFFE  45566  19744  
+000E2-0FFFE  45720  19590  
 10000-1FFEE     0  65520  
 
 

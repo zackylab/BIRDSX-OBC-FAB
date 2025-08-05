@@ -1,6 +1,7 @@
-ÀÄSTART_PIC_V1
+ÀÄSTARPIC
    ÃÄMAIN  0/160  Ram=1
    ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
    ³  ÃÄ@delay_ms1  0/22  Ram=1
    ³  ÃÄ@PSTRINGC7_837  0/74  Ram=3
    ³  ³  ÃÄ@PUTCHAR_1_  0/38  Ram=1

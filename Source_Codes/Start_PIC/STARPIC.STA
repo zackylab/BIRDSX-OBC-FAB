@@ -14,10 +14,10 @@ Stack size: 16
 Lines Stmts  %   Files
 ----- ----- ---  -----
    76    37  41  STARPIC.c
- 1295     0   0  C:\Program Files (x86)\PICC\Devices\16F1789.h
+ 1298     0   0  ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F1789.h
   125    53  59  StartPIc_Funtions.c
 ----- -----
- 1496    90 Total
+ 1499    90 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------

@@ -1,6 +1,8 @@
-CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
+CCS PCM C Compiler, Version 5.119d, 1               18-7-25 16:06
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
-               Filename:   J:\My Drive\OBC\OBC&MissionBoss Codes\START_PIC\START_PIC_V1.3\STARPIC.lst
+               Filename:   C:\Users\psych\Documents\BIRDSX-OBC-FAB\Source_Codes\Start_PIC\STARPIC.lst
 
                ROM used:   715 words (4%)
                            Largest free fragment is 2048
@@ -13,6 +15,7 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0000:  MOVLP  00
 0001:  GOTO   22C
 0002:  NOP
+*
 0004:  CLRF   03
 0005:  MOVLP  00
 0006:  MOVLB  00
@@ -74,18 +77,18 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 003E:  MOVLB  00
 003F:  MOVLP  00
 0040:  GOTO   052
-.................... #include <16F1789.h> 
-.................... //////////// Standard Header file for the PIC16F1789 device //////////////// 
-.................... /////////////////////////////////////////////////////////////////////////// 
-.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          //// 
-.................... //// This source code may only be used by licensed users of the CCS C  //// 
-.................... //// compiler.  This source code may only be distributed to other      //// 
-.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
-.................... //// or distribution is permitted without written permission.          //// 
-.................... //// Derivative programs created using this software in object code    //// 
-.................... //// form are not restricted in any way.                               //// 
-.................... /////////////////////////////////////////////////////////////////////////// 
-.................... #device PIC16F1789 
+.................... #include <16F1789.h>
+.................... //////////// Standard Header file for the PIC16F1789 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F1789
 *
 0073:  DATA D4,3A
 0074:  DATA 72,37
@@ -259,11 +262,11 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 01EF:  MOVF   53,W
 01F0:  MOVWF  55
 01F1:  CALL   0C9
-....................  
-.................... #list 
-....................  
-.................... #fuses NOWDT,MCLR,NOBROWNOUT 
-.................... #use delay(Crystal = 16MHz, clock = 16MHz) 
+.................... 
+.................... #list
+.................... 
+.................... #fuses NOWDT,MCLR,NOBROWNOUT
+.................... #use delay(Crystal = 16MHz, clock = 16MHz)
 *
 00B3:  MOVLW  20
 00B4:  MOVWF  05
@@ -287,8 +290,8 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 00C6:  DECFSZ 00,F
 00C7:  GOTO   0BA
 00C8:  RETURN
-....................  
-.................... #use rs232(baud=38400, parity=N, xmit=PIN_D3, bits=8, stream=PC, force_sw)  // dummy port 
+.................... 
+.................... #use rs232(baud=38400, parity=N, xmit=PIN_D3, bits=8, stream=PC, force_sw)  // dummy port
 00C9:  MOVLB  01
 00CA:  BCF    0F.3
 00CB:  MOVLB  02
@@ -327,28 +330,28 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 00EC:  GOTO   0DD
 00ED:  MOVLB  00
 00EE:  RETURN
-....................  
-.................... #include <StartPIc_Funtions.c> 
-.................... #byte T1CON = 0x018 
-.................... #bit    TMR1ON = T1CON.0 
-.................... #bit    T1SYNC = T1CON.2 
-.................... #bit    T1OSCEN = T1CON.3 
-.................... #bit    T1CKPS0 = T1CON.4 
-.................... #bit    T1CKPS1 = T1CON.5 
-.................... #bit    TMR1CS0 = T1CON.6 
-.................... #bit    TMR1CS1 = T1CON.7 
-....................  
-.................... unsigned int8 RPIC_TO_SPIC_ARRAY[10]; 
-....................  
-.................... #define ON   0x69 
-.................... #define OFF  0x96 
-....................  
-.................... char POWER_LINE_STATUS ; 
-....................  
-.................... // UART port related functions_________________________________________________ 
-.................... /////////////////////////////////////////////////////////////////////////////// 
-.................... #define RP_BFR_SIZE 10                                                         
-.................... #use rs232(UART1, baud=38400, parity=N, bits=8, stream=RPIC, ERRORS) 
+.................... 
+.................... #include <StartPIc_Funtions.c>
+.................... #byte T1CON = 0x018
+.................... #bit    TMR1ON = T1CON.0
+.................... #bit    T1SYNC = T1CON.2
+.................... #bit    T1OSCEN = T1CON.3
+.................... #bit    T1CKPS0 = T1CON.4
+.................... #bit    T1CKPS1 = T1CON.5
+.................... #bit    TMR1CS0 = T1CON.6
+.................... #bit    TMR1CS1 = T1CON.7
+.................... 
+.................... unsigned int8 RPIC_TO_SPIC_ARRAY[10];
+.................... 
+.................... #define ON   0x69
+.................... #define OFF  0x96
+.................... 
+.................... char POWER_LINE_STATUS ;
+.................... 
+.................... // UART port related functions_________________________________________________
+.................... ///////////////////////////////////////////////////////////////////////////////
+.................... #define RP_BFR_SIZE 10                                                        
+.................... #use rs232(UART1, baud=38400, parity=N, bits=8, stream=RPIC, ERRORS)
 *
 0041:  BTFSS  11.5
 0042:  GOTO   041
@@ -367,17 +370,17 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 004F:  BSF    1D.4
 0050:  MOVLB  00
 0051:  RETURN
-....................  
-.................... unsigned int8  RP_Buffer[RP_BFR_SIZE]; 
-.................... unsigned int16 RP_Byte_Counter = 0; 
-.................... unsigned int8  RP_Overflow = 0; 
-.................... unsigned int16 RP_Read_Byte_counter = 0; 
-.................... unsigned int8  RP_Temp_byte = 0; 
-....................  
-.................... #INT_RDA 
-.................... Void SERIAL_ISR1()                                                             // MAIN PIC uart interupt loop 
-.................... { 
-....................    if( RP_Byte_Counter < RP_BFR_SIZE ) 
+.................... 
+.................... unsigned int8  RP_Buffer[RP_BFR_SIZE];
+.................... unsigned int16 RP_Byte_Counter = 0;
+.................... unsigned int8  RP_Overflow = 0;
+.................... unsigned int16 RP_Read_Byte_counter = 0;
+.................... unsigned int8  RP_Temp_byte = 0;
+.................... 
+.................... #INT_RDA
+.................... Void SERIAL_ISR1()                                                             // MAIN PIC uart interupt loop
+.................... {
+....................    if( RP_Byte_Counter < RP_BFR_SIZE )
 0052:  MOVF   3F,F
 0053:  BTFSS  03.2
 0054:  GOTO   06D
@@ -385,8 +388,8 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0056:  SUBLW  09
 0057:  BTFSS  03.0
 0058:  GOTO   06D
-....................    { 
-....................       RP_Buffer[RP_Byte_Counter] = fgetc(RPIC); 
+....................    {
+....................       RP_Buffer[RP_Byte_Counter] = fgetc(RPIC);
 0059:  MOVLW  14
 005A:  ADDWF  3E,W
 005B:  MOVWF  04
@@ -403,34 +406,34 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0066:  MOVWF  04
 0067:  MOVF   78,W
 0068:  MOVWF  00
-....................       RP_Byte_Counter++; 
+....................       RP_Byte_Counter++;
 0069:  INCF   3E,F
 006A:  BTFSC  03.2
 006B:  INCF   3F,F
-....................    } 
+....................    }
 006C:  GOTO   070
-....................     
-....................    else RP_Overflow = fgetc(RPIC); 
+....................    
+....................    else RP_Overflow = fgetc(RPIC);
 006D:  CALL   041
 006E:  MOVF   78,W
 006F:  MOVWF  40
 0070:  BCF    11.5
 0071:  MOVLP  00
 0072:  GOTO   026
-.................... } 
-....................  
-....................  
-.................... unsigned int8 RPic_Available() 
-.................... { 
-....................    return RP_Byte_Counter ; 
+.................... }
+.................... 
+.................... 
+.................... unsigned int8 RPic_Available()
+.................... {
+....................    return RP_Byte_Counter ;
 *
 018F:  MOVF   3E,W
 0190:  MOVWF  78
-.................... } 
-....................  
-.................... unsigned int8 RPic_Read() 
-.................... { 
-....................    if (RP_Byte_Counter>0) 
+.................... }
+.................... 
+.................... unsigned int8 RPic_Read()
+.................... {
+....................    if (RP_Byte_Counter>0)
 *
 0163:  MOVF   3E,F
 0164:  BTFSS  03.2
@@ -438,8 +441,8 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0166:  MOVF   3F,F
 0167:  BTFSC  03.2
 0168:  GOTO   183
-....................    {     
-....................       RP_Temp_byte = RP_Buffer[RP_Read_Byte_counter]; 
+....................    {    
+....................       RP_Temp_byte = RP_Buffer[RP_Read_Byte_counter];
 0169:  MOVLW  14
 016A:  ADDWF  41,W
 016B:  MOVWF  04
@@ -448,17 +451,17 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 016E:  MOVWF  05
 016F:  MOVF   00,W
 0170:  MOVWF  43
-....................        
-....................       RP_Byte_Counter--; 
+....................       
+....................       RP_Byte_Counter--;
 0171:  MOVF   3E,W
 0172:  BTFSC  03.2
 0173:  DECF   3F,F
 0174:  DECF   3E,F
-....................       RP_Read_Byte_counter++; 
+....................       RP_Read_Byte_counter++;
 0175:  INCF   41,F
 0176:  BTFSC  03.2
 0177:  INCF   42,F
-....................       if(RP_Byte_Counter == 0) RP_Read_Byte_counter = 0; 
+....................       if(RP_Byte_Counter == 0) RP_Read_Byte_counter = 0;
 0178:  MOVF   3E,F
 0179:  BTFSS  03.2
 017A:  GOTO   180
@@ -467,77 +470,78 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 017D:  GOTO   180
 017E:  CLRF   42
 017F:  CLRF   41
-....................       return RP_Temp_byte;  
+....................       return RP_Temp_byte; 
 0180:  MOVF   43,W
 0181:  MOVWF  78
 0182:  GOTO   18E
-....................    } 
-....................     
-....................    if (RP_Byte_Counter == 0) 
+....................    }
+....................    
+....................    if (RP_Byte_Counter == 0)
 0183:  MOVF   3E,F
 0184:  BTFSS  03.2
 0185:  GOTO   18E
 0186:  MOVF   3F,F
 0187:  BTFSS  03.2
 0188:  GOTO   18E
-....................    {  
-....................       RP_Read_Byte_counter = 0; 
+....................    { 
+....................       RP_Read_Byte_counter = 0;
 0189:  CLRF   42
 018A:  CLRF   41
-....................       RP_Temp_byte = 0x00; 
+....................       RP_Temp_byte = 0x00;
 018B:  CLRF   43
-....................       return RP_Temp_byte;  
+....................       return RP_Temp_byte; 
 018C:  MOVF   43,W
 018D:  MOVWF  78
-....................    } 
+....................    }
 018E:  RETURN
-.................... } 
-....................  
-....................  
-.................... void CHECK_UART_INCOMING_FROM_RESET_PIC() 
-.................... { 
-....................    if( Rpic_Available() ) 
+.................... }
+.................... 
+.................... 
+.................... void CHECK_UART_INCOMING_FROM_RESET_PIC()
+.................... {
+....................    if( Rpic_Available() )
+*
 0191:  MOVF   78,F
 0192:  BTFSC  03.2
 0193:  GOTO   1FD
-....................    { 
-....................       delay_ms(10); 
+....................    {
+....................       delay_ms(10);
 0194:  MOVLW  0A
 0195:  MOVWF  52
 0196:  CALL   0B3
-....................       for(int i=0; i<8; i++) 
+....................       for(int i=0; i<8; i++)
 0197:  CLRF   4F
 0198:  MOVF   4F,W
 0199:  SUBLW  07
 019A:  BTFSS  03.0
 019B:  GOTO   1A6
-....................       { 
-....................          if( RPIC_Read() == 0xAA ) 
+....................       {
+....................          if( RPIC_Read() == 0xAA )
 019C:  CALL   163
 019D:  MOVF   78,W
 019E:  SUBLW  AA
 019F:  BTFSS  03.2
 01A0:  GOTO   1A4
-....................          { 
-....................             RPIC_TO_SPIC_ARRAY[0] = 0xAA; 
+....................          {
+....................             RPIC_TO_SPIC_ARRAY[0] = 0xAA;
 01A1:  MOVLW  AA
 01A2:  MOVWF  28
-....................             break; 
+....................             break;
 01A3:  GOTO   1A6
-....................          } 
+....................          }
 01A4:  INCF   4F,F
 01A5:  GOTO   198
-....................       } 
-....................        
-....................       for(int i=1; i<10; i++) 
+....................       }
+....................       
+....................       for(int i=1; i<10; i++)
 01A6:  MOVLW  01
 01A7:  MOVWF  50
 01A8:  MOVF   50,W
 01A9:  SUBLW  09
 01AA:  BTFSS  03.0
 01AB:  GOTO   1C0
-....................       { 
-....................          RPIC_TO_SPIC_ARRAY[i] = RPIC_Read() ; 
+....................       {
+....................          RPIC_TO_SPIC_ARRAY[i] = RPIC_Read() ;
 01AC:  MOVLW  08
 01AD:  ADDWF  50,W
 01AE:  MOVWF  78
@@ -558,16 +562,16 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 01BD:  MOVWF  00
 01BE:  INCF   50,F
 01BF:  GOTO   1A8
-....................       } 
-....................        
-....................       for(int i=0; i<3; i++) 
+....................       }
+....................       
+....................       for(int i=0; i<3; i++)
 01C0:  CLRF   51
 01C1:  MOVF   51,W
 01C2:  SUBLW  02
 01C3:  BTFSS  03.0
 01C4:  GOTO   1F7
-....................       { 
-....................          fprintf(PC, "%X ", RPIC_TO_SPIC_ARRAY[i] ); 
+....................       {
+....................          fprintf(PC, "%X ", RPIC_TO_SPIC_ARRAY[i] );
 01C5:  MOVLW  08
 01C6:  ADDWF  51,W
 01C7:  MOVWF  04
@@ -587,48 +591,48 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 01F4:  CALL   0C9
 01F5:  INCF   51,F
 01F6:  GOTO   1C1
-....................       } 
-....................       fprintf(PC, "\n\r"); 
+....................       }
+....................       fprintf(PC, "\n\r");
 01F7:  MOVLW  0A
 01F8:  MOVWF  55
 01F9:  CALL   0C9
 01FA:  MOVLW  0D
 01FB:  MOVWF  55
 01FC:  CALL   0C9
-....................    } 
+....................    }
 01FD:  MOVLP  00
 01FE:  GOTO   275 (RETURN)
-.................... } 
-....................  
-....................  
-.................... void TURN_OFF_ALL_POWER_LINES() 
-.................... { 
-....................    output_Low(PIN_D6);                                                         // Switch enable for COM PIC 
+.................... }
+.................... 
+.................... 
+.................... void TURN_OFF_ALL_POWER_LINES()
+.................... {
+....................    output_Low(PIN_D6);                                                         // Switch enable for COM PIC
 01FF:  MOVLB  01
 0200:  BCF    0F.6
 0201:  MOVLB  02
 0202:  BCF    0F.6
-....................    output_Low(PIN_D7);                                                         // Switch enable for Main PIC    
+....................    output_Low(PIN_D7);                                                         // Switch enable for Main PIC   
 0203:  MOVLB  01
 0204:  BCF    0F.7
 0205:  MOVLB  02
 0206:  BCF    0F.7
-....................    output_Low(PIN_C2);                                                         //OCP switch disable for Unreg #1 
+....................    output_Low(PIN_C2);                                                         //OCP switch disable for Unreg #1
 0207:  MOVLB  01
 0208:  BCF    0E.2
 0209:  MOVLB  02
 020A:  BCF    0E.2
-....................    output_Low(PIN_C5);                                                         //OCP switch disable for Unreg #2 
+....................    output_Low(PIN_C5);                                                         //OCP switch disable for Unreg #2
 020B:  MOVLB  01
 020C:  BCF    0E.5
 020D:  MOVLB  02
 020E:  BCF    0E.5
-....................     
-....................    POWER_LINE_STATUS = OFF ; 
+....................    
+....................    POWER_LINE_STATUS = OFF ;
 020F:  MOVLW  96
 0210:  MOVLB  00
 0211:  MOVWF  32
-....................    fprintf(PC, "Turned OFF Power lines\n\r"); 
+....................    fprintf(PC, "Turned OFF Power lines\n\r");
 0212:  MOVLW  73
 0213:  MOVLB  03
 0214:  MOVWF  11
@@ -638,56 +642,56 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0218:  CALL   0EF
 0219:  MOVLP  00
 021A:  GOTO   28D (RETURN)
-.................... } 
-....................  
-.................... void TURN_ON_ALL_POWER_LINES() 
-.................... { 
-....................    output_High(PIN_D6);                                                          
+.................... }
+.................... 
+.................... void TURN_ON_ALL_POWER_LINES()
+.................... {
+....................    output_High(PIN_D6);                                                         
 *
 0139:  MOVLB  01
 013A:  BCF    0F.6
 013B:  MOVLB  02
 013C:  BSF    0F.6
-....................    Delay_ms(50); 
+....................    Delay_ms(50);
 013D:  MOVLW  32
 013E:  MOVLB  00
 013F:  MOVWF  52
 0140:  CALL   0B3
-....................    output_High(PIN_D7);                                                          
+....................    output_High(PIN_D7);                                                         
 0141:  MOVLB  01
 0142:  BCF    0F.7
 0143:  MOVLB  02
 0144:  BSF    0F.7
-....................    Delay_ms(50); 
+....................    Delay_ms(50);
 0145:  MOVLW  32
 0146:  MOVLB  00
 0147:  MOVWF  52
 0148:  CALL   0B3
-....................    output_High(PIN_C2);                                                          
+....................    output_High(PIN_C2);                                                         
 0149:  MOVLB  01
 014A:  BCF    0E.2
 014B:  MOVLB  02
 014C:  BSF    0E.2
-....................    Delay_ms(50); 
+....................    Delay_ms(50);
 014D:  MOVLW  32
 014E:  MOVLB  00
 014F:  MOVWF  52
 0150:  CALL   0B3
-....................    output_High(PIN_C5);                                                         
+....................    output_High(PIN_C5);                                                        
 0151:  MOVLB  01
 0152:  BCF    0E.5
 0153:  MOVLB  02
 0154:  BSF    0E.5
-....................    Delay_ms(50); 
+....................    Delay_ms(50);
 0155:  MOVLW  32
 0156:  MOVLB  00
 0157:  MOVWF  52
 0158:  CALL   0B3
-....................     
-....................    POWER_LINE_STATUS = ON ; 
+....................    
+....................    POWER_LINE_STATUS = ON ;
 0159:  MOVLW  69
 015A:  MOVWF  32
-....................    fprintf(PC, "Turned ON Power lines\n\r"); 
+....................    fprintf(PC, "Turned ON Power lines\n\r");
 015B:  MOVLW  80
 015C:  MOVLB  03
 015D:  MOVWF  11
@@ -696,11 +700,11 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0160:  MOVLB  00
 0161:  CALL   0EF
 0162:  RETURN
-.................... } 
-....................  
-.................... void CLEAR_RPIC_TO_SPIC_ARRAY() 
-.................... { 
-....................    for( int i = 0; i<10; i++ ) RPIC_TO_SPIC_ARRAY[i] = 0; 
+.................... }
+.................... 
+.................... void CLEAR_RPIC_TO_SPIC_ARRAY()
+.................... {
+....................    for( int i = 0; i<10; i++ ) RPIC_TO_SPIC_ARRAY[i] = 0;
 *
 021B:  CLRF   4F
 021C:  MOVF   4F,W
@@ -719,16 +723,16 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0229:  GOTO   21C
 022A:  MOVLP  00
 022B:  GOTO   28E (RETURN)
-.................... } 
-....................  
-.................... unsigned int16 RPIC_RESPOND_SEC_COUNTER = 0 ;               // main loop counter 
-.................... unsigned int16 MLC = 0 ; 
-....................  
-.................... unsigned int16 SEC_COUNT    = 0; 
-.................... unsigned int8  ONEHOUR_FLAG = 0x00 ;    
-....................  
-.................... char BB, CC; 
-.................... void main() 
+.................... }
+.................... 
+.................... unsigned int16 RPIC_RESPOND_SEC_COUNTER = 0 ;               // main loop counter
+.................... unsigned int16 MLC = 0 ;
+.................... 
+.................... unsigned int16 SEC_COUNT    = 0;
+.................... unsigned int8  ONEHOUR_FLAG = 0x00 ;   
+.................... 
+.................... char BB, CC;
+.................... void main()
 022C:  MOVLB  01
 022D:  BCF    0F.3
 022E:  MOVLB  02
@@ -768,8 +772,8 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0250:  MOVLB  02
 0251:  CLRF   12
 0252:  CLRF   11
-.................... { 
-....................    Delay_ms(500); 
+.................... {
+....................    Delay_ms(500);
 0253:  MOVLW  02
 0254:  MOVLB  00
 0255:  MOVWF  4F
@@ -778,7 +782,7 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0258:  CALL   0B3
 0259:  DECFSZ 4F,F
 025A:  GOTO   256
-....................    fprintf(PC, "Start PIC booting...........\n\r"); 
+....................    fprintf(PC, "Start PIC booting...........\n\r");
 025B:  MOVLW  8C
 025C:  MOVLB  03
 025D:  MOVWF  11
@@ -786,46 +790,46 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 025F:  MOVWF  12
 0260:  MOVLB  00
 0261:  CALL   0EF
-....................     
-....................    enable_interrupts(INT_RDA) ;                                                // enabling timer 1 interupt  
+....................    
+....................    enable_interrupts(INT_RDA) ;                                                // enabling timer 1 interupt 
 0262:  MOVLB  01
 0263:  BSF    11.5
-....................    enable_interrupts(GLOBAL)  ;                                                // start interupt procesing 
+....................    enable_interrupts(GLOBAL)  ;                                                // start interupt procesing
 0264:  MOVLW  C0
 0265:  IORWF  0B,F
-....................     
-....................    TURN_ON_ALL_POWER_LINES() ;                                                // beging with power lines off 
+....................    
+....................    TURN_ON_ALL_POWER_LINES() ;                                                // beging with power lines off
 0266:  MOVLB  00
 0267:  CALL   139
-....................     
-....................    CC = input(PIN_B6); 
+....................    
+....................    CC = input(PIN_B6);
 0268:  MOVLB  01
 0269:  BSF    0D.6
 026A:  MOVLB  00
 026B:  CLRF   4E
 026C:  BTFSC  0D.6
 026D:  INCF   4E,F
-....................    BB = input(PIN_B7); 
+....................    BB = input(PIN_B7);
 026E:  MOVLB  01
 026F:  BSF    0D.7
 0270:  MOVLB  00
 0271:  CLRF   4D
 0272:  BTFSC  0D.7
 0273:  INCF   4D,F
-....................     
-....................    while(TRUE) 
-....................    { 
-....................       CHECK_UART_INCOMING_FROM_RESET_PIC(); 
+....................    
+....................    while(TRUE)
+....................    {
+....................       CHECK_UART_INCOMING_FROM_RESET_PIC();
 0274:  GOTO   18F
-....................   
-....................       if( ONEHOUR_FLAG == 0xAA ) 
+....................  
+....................       if( ONEHOUR_FLAG == 0xAA )
 0275:  MOVF   4C,W
 0276:  SUBLW  AA
 0277:  BTFSS  03.2
 0278:  GOTO   2AE
-....................       { 
-....................          // check response from reset pic 
-....................          if( (RPIC_TO_SPIC_ARRAY[0] == 0xAA) && (RPIC_TO_SPIC_ARRAY[1] == 0xBB) && (RPIC_TO_SPIC_ARRAY[2] == 0xCC) ) 
+....................       {
+....................          // check response from reset pic
+....................          if( (RPIC_TO_SPIC_ARRAY[0] == 0xAA) && (RPIC_TO_SPIC_ARRAY[1] == 0xBB) && (RPIC_TO_SPIC_ARRAY[2] == 0xCC) )
 0279:  MOVF   28,W
 027A:  SUBLW  AA
 027B:  BTFSS  03.2
@@ -838,25 +842,25 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0282:  SUBLW  CC
 0283:  BTFSS  03.2
 0284:  GOTO   28E
-....................          { 
-....................             RPIC_RESPOND_SEC_COUNTER = 0 ; 
+....................          {
+....................             RPIC_RESPOND_SEC_COUNTER = 0 ;
 0285:  CLRF   47
 0286:  CLRF   46
-....................             MLC = 0; 
+....................             MLC = 0;
 0287:  CLRF   49
 0288:  CLRF   48
-....................             //fprintf(PC, "Reset pic respond\n\r"); 
-....................             if( POWER_LINE_STATUS == ON ) TURN_OFF_ALL_POWER_LINES(); 
+....................             //fprintf(PC, "Reset pic respond\n\r");
+....................             if( POWER_LINE_STATUS == ON ) TURN_OFF_ALL_POWER_LINES();
 0289:  MOVF   32,W
 028A:  SUBLW  69
 028B:  BTFSC  03.2
 028C:  GOTO   1FF
-....................              
-....................             CLEAR_RPIC_TO_SPIC_ARRAY(); 
+....................             
+....................             CLEAR_RPIC_TO_SPIC_ARRAY();
 028D:  GOTO   21B
-....................          } 
-....................                 
-....................          if( MLC >= 50 ) 
+....................          }
+....................                
+....................          if( MLC >= 50 )
 028E:  MOVF   49,F
 028F:  BTFSS  03.2
 0290:  GOTO   295
@@ -864,18 +868,18 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 0292:  SUBLW  31
 0293:  BTFSC  03.0
 0294:  GOTO   29A
-....................          { 
-....................             MLC = 0; 
+....................          {
+....................             MLC = 0;
 0295:  CLRF   49
 0296:  CLRF   48
-....................             RPIC_RESPOND_SEC_COUNTER++; 
+....................             RPIC_RESPOND_SEC_COUNTER++;
 0297:  INCF   46,F
 0298:  BTFSC  03.2
 0299:  INCF   47,F
-....................          } 
-....................           
-....................          // if response counter reach three minute we have to turn on power lines 
-....................          if( RPIC_RESPOND_SEC_COUNTER >= 36 ) 
+....................          }
+....................          
+....................          // if response counter reach three minute we have to turn on power lines
+....................          if( RPIC_RESPOND_SEC_COUNTER >= 36 )
 029A:  MOVF   47,F
 029B:  BTFSS  03.2
 029C:  GOTO   2A1
@@ -883,8 +887,8 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 029E:  SUBLW  23
 029F:  BTFSC  03.0
 02A0:  GOTO   2AB
-....................          { 
-....................             fprintf(PC, "Reset pic did not respond for three minute\n\r"); 
+....................          {
+....................             fprintf(PC, "Reset pic did not respond for three minute\n\r");
 02A1:  MOVLW  9C
 02A2:  MOVLB  03
 02A3:  MOVWF  11
@@ -892,29 +896,29 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 02A5:  MOVWF  12
 02A6:  MOVLB  00
 02A7:  CALL   0EF
-....................             RPIC_RESPOND_SEC_COUNTER = 0 ; 
+....................             RPIC_RESPOND_SEC_COUNTER = 0 ;
 02A8:  CLRF   47
 02A9:  CLRF   46
-....................              
-....................             TURN_ON_ALL_POWER_LINES(); 
+....................             
+....................             TURN_ON_ALL_POWER_LINES();
 02AA:  CALL   139
-....................          }   
-....................          MLC++; 
+....................          }  
+....................          MLC++;
 02AB:  INCF   48,F
 02AC:  BTFSC  03.2
 02AD:  INCF   49,F
-....................       } 
-....................        
-....................       if( ONEHOUR_FLAG == 0x00 ) 
+....................       }
+....................       
+....................       if( ONEHOUR_FLAG == 0x00 )
 02AE:  MOVF   4C,F
 02AF:  BTFSS  03.2
 02B0:  GOTO   2C1
-....................       { 
-....................          SEC_COUNT++; 
+....................       {
+....................          SEC_COUNT++;
 02B1:  INCF   4A,F
 02B2:  BTFSC  03.2
 02B3:  INCF   4B,F
-....................          if(SEC_COUNT >= 36000)     // one hour 36000 
+....................          if(SEC_COUNT >= 36000)     // one hour 36000
 02B4:  MOVF   4B,W
 02B5:  SUBLW  8B
 02B6:  BTFSC  03.0
@@ -926,18 +930,18 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 02BC:  SUBLW  9F
 02BD:  BTFSC  03.0
 02BE:  GOTO   2C1
-....................          { 
-....................             ONEHOUR_FLAG = 0xAA; 
+....................          {
+....................             ONEHOUR_FLAG = 0xAA;
 02BF:  MOVLW  AA
 02C0:  MOVWF  4C
-....................          } 
-....................       } 
-....................        
-....................       delay_ms(100); 
+....................          }
+....................       }
+....................       
+....................       delay_ms(100);
 02C1:  MOVLW  64
 02C2:  MOVWF  52
 02C3:  CALL   0B3
-....................       Output_Toggle(PIN_B2);            // external WDT pin toggle   
+....................       Output_Toggle(PIN_B2);            // external WDT pin toggle  
 02C4:  MOVLB  01
 02C5:  BCF    0D.2
 02C6:  MOVLW  04
@@ -945,9 +949,9 @@ CCS PCM C Compiler, Version 5.078, 5967               24-Jan-24 00:19
 02C8:  XORWF  0D,F
 02C9:  MOVLB  00
 02CA:  GOTO   274
-....................    } 
-.................... } 
-....................  
+....................    }
+.................... }
+.................... 
 02CB:  SLEEP
 
 Configuration Fuses:
