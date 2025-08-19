@@ -26,13 +26,19 @@ void Settings()
 {
    // assert(B_6 = 0 || B_6 = 1);
    B_6 = input(PIN_B6);
-   // assert(B_7 = 0 || B_6 = 1);
+
+   // assert(B_7 = 0 || B_7 = 1);
    B_7 = input(PIN_B7);
    
    OUtput_Low(RSTPIC_RESTART_PIN) ;                  // reset pic Restart pin low
-   OLD_TRX_RX_MODE();
-   OUtput_LOW(TRXPWR_PIN);                           // New TRX off start
-   NEW_TRX_RX_MODE();
+   // assert(RSTPIC_RESTART_PIN = 0);
+   
+   OLD_TRX_RX_MODE();                                // Place the old transceiver in receive (RX) mode.
+   
+   OUtput_LOW(TRXPWR_PIN);
+   // assert(TRXPWR_PIN = 0);                         // New TRX off start
+   
+   NEW_TRX_RX_MODE();                                // Place the new transceiver in receive (RX) mode. 
      
    enable_interrupts(INT_RDA)  ;                      // enabling OLDTRX UART interupt
    enable_interrupts(INT_RDA2) ;                      // enabling MAIN PIC UART interupt
