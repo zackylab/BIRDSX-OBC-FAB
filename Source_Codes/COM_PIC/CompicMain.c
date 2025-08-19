@@ -24,7 +24,9 @@ char B_6, B_7 ;
 
 void Settings()
 {
+   // assert(B_6 = 0 || B_6 = 1);
    B_6 = input(PIN_B6);
+   // assert(B_7 = 0 || B_6 = 1);
    B_7 = input(PIN_B7);
    
    OUtput_Low(RSTPIC_RESTART_PIN) ;                  // reset pic Restart pin low
