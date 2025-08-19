@@ -30,11 +30,13 @@ void Settings()
    // assert(B_7 = 0 || B_7 = 1);
    B_7 = input(PIN_B7);
    
+   // assert(RSTPIC_RESTART_PIN = 0 || RSTPIC_RESTART_PIN = 1);
    OUtput_Low(RSTPIC_RESTART_PIN) ;                  // reset pic Restart pin low
    // assert(RSTPIC_RESTART_PIN = 0);
    
    OLD_TRX_RX_MODE();                                // Place the old transceiver in receive (RX) mode.
    
+   // assert(TRXPWR_PIN = 0 || TRXPWR_PIN = 1);
    OUtput_LOW(TRXPWR_PIN);
    // assert(TRXPWR_PIN = 0);                         // New TRX off start
    
@@ -49,7 +51,8 @@ void Settings()
    
    LOAD_CW_MODE_AND_NEW_TRX_STATUS();                // check cw tranmitter and new trx status
    ENABLE_DISABLE_NEW_TRX_POWER();                   // check new trx should be on or not
-      
+   
+   // assert(4ms <= WDT <= 4194000ms);
    SETUP_WDT(WDT_128S);
 
    Delay_ms(2000);
