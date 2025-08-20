@@ -37,8 +37,8 @@ void Settings()
    OLD_TRX_RX_MODE();                                // Place the old transceiver in receive (RX) mode.
    
    // assert(TRXPWR_PIN = 0 || TRXPWR_PIN = 1);
-   OUtput_LOW(TRXPWR_PIN);
-   // assert(TRXPWR_PIN = 0);                         // New TRX off start
+   OUtput_LOW(TRXPWR_PIN);                           // New TRX off start
+   // assert(TRXPWR_PIN = 0);        
    
    NEW_TRX_RX_MODE();                                // Place the new transceiver in receive (RX) mode. 
      
