@@ -31,16 +31,38 @@ Void TIMER1_ISR()
 void settings()
 {
    //output_low(PIN_C6);
+   // assert(int1 status = 0 || int1 status = 1);
    MP_CP_BuckBoost(ON)              ;      // enable MP CP buck boost conveter
-   MainPic_Power(ON)                ;      // turn on main pic power
-   ComPic_Power(ON)                 ;      // turn on com pic power
-   _3V3Power_Line1(BB_ON_OCP_ON)    ;      // both obc and buck boost converters are ON
-   _3V3Power_Line2(BB_ON_OCP_ON)    ;      // both obc and buck boost converter are OFF
-   _5V0Power_Line(BB_ON_OCP_ON)     ;      // both obc and buck boost converters are OFF BB_ON_OCP_ON
+   // assert(int1 status = 1);
    
-   Unreg1_Line(ON)                  ;      // turn on unreg line 1
-   Unreg2_Line(ON)                  ;      // turn off unreg line 2
+   // assert(int1 status = 0 || int1 status = 1);
+   MainPic_Power(ON)                ;      // turn on main pic power
+   // assert(int1 status = 1);
 
+   // assert(int1 status = 0 || int1 status = 1);
+   ComPic_Power(ON)                 ;      // turn on com pic power
+   // assert(int1 status = 1);
+
+   // assert(int1 status = 0 || int1 status = 2 || int1 status = 3);
+   _3V3Power_Line1(BB_ON_OCP_ON)    ;      // both obc and buck boost converters are ON
+   // assert(int1 status = 1);
+   
+   // assert(int1 status = 0 || int1 status = 2 || int1 status = 3);
+   _3V3Power_Line2(BB_ON_OCP_ON)    ;      // both obc and buck boost converter are OFF
+   // assert(int1 status = 1);
+   
+   // assert(int1 status = 0 || int1 status = 2 || int1 status = 3);
+   _5V0Power_Line(BB_ON_OCP_ON)     ;      // both obc and buck boost converters are OFF BB_ON_OCP_ON
+   // assert(int1 status = 1);
+   
+   // assert(int1 status = 0 || int1 status = 1);
+   Unreg1_Line(ON)                  ;      // turn on unreg line 1
+   // assert(int1 status = 1);
+   
+   // assert(int1 status = 0 || int1 status = 1);
+   Unreg2_Line(ON)                  ;      // turn off unreg line 2
+   // assert(int1 status = 1);
+   
    setup_timer_1(T1_EXTERNAL | T1_DIV_BY_1);         // timer-1 clock source ans prescaler value         
    SOSCEN1 = 1;                                      // enabling timer 1
    set_timer1(0x8000);                               // timer 1 preload
