@@ -75,6 +75,7 @@ void settings()
    SETUP_ADC(ADC_CLOCK_INTERNAL);
    SETUP_ADC_PORTS(sAN2|sAN1|sAN0|sAN4|sAN6|sAN9);   // setting all analog ports
    
+   // assert( 0 <= year < 100, 1 <= month < 13, 1 <= day < 32, 0 <= hour < 24, 0 <= minute < 60, 0 <= second < 60 );
    Set_RTC(24,01,01, 00,00,06);
    MPic_flush() ;
    fprintf( PC, "Reset pic is booting.......\n\r");
