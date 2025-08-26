@@ -22,9 +22,12 @@ void main()
    
    TURN_ON_ALL_POWER_LINES() ;                                                // beging with power lines off
    
+   // assert(B_6 = 0 || B_6 = 1);
    CC = input(PIN_B6);
+
+   // assert(B_7 = 0 || B_7 = 1);
    BB = input(PIN_B7);
-   
+
    while(TRUE)
    {
       CHECK_UART_INCOMING_FROM_RESET_PIC();
