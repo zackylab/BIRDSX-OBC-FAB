@@ -28,7 +28,7 @@ Void setting()
    
    SETUP_RTC(RTC_ENABLE | RTC_CLOCK_SOSC,0);   // enabling internal RTC of main pic
    
-   // assert( 0 <= year && year < 100, 1 <= month && month < 13, 1 <= day && day < 32, 0 <= hour && hour < 24, 0 <= minute && minute < 60, 0 <= second && second < 60);
+   // assert(0 <= year && year < 100, 1 <= month && month < 13, 1 <= day && day < 32, 0 <= hour && hour < 24, 0 <= minute && minute < 60, 0 <= second && second < 60);
    Write_OBC_RTC(23,07,28,00,00,01);           // setting RTC time value
    
    OUTPUT_HIGH(PIN_C5);                        // start COM flash memoy acces to com PIC
