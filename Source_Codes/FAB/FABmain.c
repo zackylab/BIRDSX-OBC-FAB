@@ -11,13 +11,13 @@ char B_6, B_7 ;
 
 void Settings()
 {
-   // assert(B_6 = 0 || B_6 = 1);
+   // assert(B_6 == 0 || B_6 == 1);
    B_6 = input(PIN_B6);
 
-   // assert(B_7 = 0 || B_7 = 1);
+   // assert(B_7 == 0 || B_7 == 1);
    B_7 = input(PIN_B7);
    
-   // assert(4ms <= WDT <= 4194000ms);
+   // // assert(4 <= WDT && WDT <= 4194000);
    Setup_WDT(WDT_8S);                // setting up internal WDT 64 seconds
    
    SETUP_ADC(ADC_CLOCK_INTERNAL);
