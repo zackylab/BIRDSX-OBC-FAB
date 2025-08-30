@@ -31,37 +31,37 @@ Void TIMER1_ISR()
 void settings()
 {
    //output_low(PIN_C6);
-   // assert(int1 status = 0 || int1 status = 1);
+   // assert(int1 status == 0 || int1 status == 1);
    MP_CP_BuckBoost(ON)              ;      // enable MP CP buck boost conveter
-   // assert(int1 status = 1);
+   // assert(int1 status == 1);
    
-   // assert(int1 status = 0 || int1 status = 1);
+   // assert(int1 status == 0 || int1 status == 1);
    MainPic_Power(ON)                ;      // turn on main pic power
-   // assert(int1 status = 1);
+   // assert(int1 status == 1);
 
-   // assert(int1 status = 0 || int1 status = 1);
+   // assert(int1 status == 0 || int1 status == 1);
    ComPic_Power(ON)                 ;      // turn on com pic power
-   // assert(int1 status = 1);
+   // assert(int1 status == 1);
 
-   // assert(int1 status = 0 || int1 status = 2 || int1 status = 3);
+   // assert(int1 status == 1 || int1 status == 2 || int1 status == 3);
    _3V3Power_Line1(BB_ON_OCP_ON)    ;      // both obc and buck boost converters are ON
-   // assert(int1 status = 1);
+   // assert(int1 status == 1);
    
-   // assert(int1 status = 0 || int1 status = 2 || int1 status = 3);
+   // assert(int1 status == 1 || int1 status == 2 || int1 status == 3);
    _3V3Power_Line2(BB_ON_OCP_ON)    ;      // both obc and buck boost converter are OFF
-   // assert(int1 status = 1);
+   // assert(int1 status == 1);
    
-   // assert(int1 status = 0 || int1 status = 2 || int1 status = 3);
+   // assert(int1 status == 1 || int1 status == 2 || int1 status == 3);
    _5V0Power_Line(BB_ON_OCP_ON)     ;      // both obc and buck boost converters are OFF BB_ON_OCP_ON
-   // assert(int1 status = 1);
+   // assert(int1 status == 1);
    
-   // assert(int1 status = 0 || int1 status = 1);
+   // assert(int1 status == 0 || int1 status == 1);
    Unreg1_Line(ON)                  ;      // turn on unreg line 1
-   // assert(int1 status = 1);
+   // assert(int1 status == 1);
    
-   // assert(int1 status = 0 || int1 status = 1);
+   // assert(int1 status == 0 || int1 status == 1);
    Unreg2_Line(ON)                  ;      // turn off unreg line 2
-   // assert(int1 status = 1);
+   // assert(int1 status == 1);
    
    setup_timer_1(T1_EXTERNAL | T1_DIV_BY_1);         // timer-1 clock source ans prescaler value         
    SOSCEN1 = 1;                                      // enabling timer 1
@@ -75,7 +75,7 @@ void settings()
    SETUP_ADC(ADC_CLOCK_INTERNAL);
    SETUP_ADC_PORTS(sAN2|sAN1|sAN0|sAN4|sAN6|sAN9);   // setting all analog ports
    
-   // assert( 0 <= year < 100, 1 <= month < 13, 1 <= day < 32, 0 <= hour < 24, 0 <= minute < 60, 0 <= second < 60 );
+   // assert(0 <= year && year < 100, 1 <= month && month < 13, 1 <= day && day < 32, 0 <= hour && hour < 24, 0 <= minute && minute < 60, 0 <= second && second < 60);
    Set_RTC(24,01,01, 00,00,06);
    MPic_flush() ;
    fprintf( PC, "Reset pic is booting.......\n\r");
