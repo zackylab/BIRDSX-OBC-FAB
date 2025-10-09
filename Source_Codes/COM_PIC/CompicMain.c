@@ -4,8 +4,10 @@
 #include <PIC18F67J94_REGISTERS.h>
 
 char SAT_ID    = 0x77 ;     // this is the satellite id
+
 int OLDTRX_RPL = 0    ;     // old tranceiver received packet lenngth
-int NEWTRX_RPL = 0    ;     // old tranceiver received packet lenngth
+
+int NEWTRX_RPL = 0    ;     // new tranceiver received packet lenngth
 
 int16 CW_INTERVAL = 100 ;
 
@@ -69,13 +71,16 @@ void main()
    {
       CHECK_UART_INCOMING_FROM_NEW_TRX(0x54)  ;
       CHECK_UART_INCOMING_FROM_OLD_TRX(0x42)  ;
-       
+      
+      // seert(CW_INTERVAL == 100 || CW_INTERVAL == 125 || CW_INTERVAL == 150);
       COMUNICATE_WITH_RSTPIC_EVERY90SEC_AND_ASK_CW_DATA_FROM_MAINPIC(CW_INTERVAL);
 
       // =====================================================================================================================================
       // Processing command coming from New UHF Tranceiver_____________________
       EXTRACTING_NEW_TRANCEIVER_COMMAND(0x54);
       
+      // assert(0 <= SAT_ID && SAT_ID <= 255);
+      // assert(NEWTRX_RPL == 0 || 10 <= NEWTRX_RPL && NEWTRX_RPL < 49);
       if( NEWTRX_TO_CPIC_ARRAY[0] == 0x54 && NEWTRX_TO_CPIC_ARRAY[1] == SAT_ID && NEWTRX_TO_CPIC_ARRAY[NEWTRX_RPL] == 0xAA )     // 0x54 = "T"
       {
          fprintf(PC, "Command from Tharindu's new Transceiver\n\r");
@@ -112,6 +117,8 @@ void main()
       // Processing command coming from ADDNICS Tranceiver_____________________
       EXTRACTING_OLD_TRANCEIVER_COMMAND(0x42);
       
+      // assert(0 <= SAT_ID && SAT_ID <= 255);
+      // assert(OLDTRX_RPL == 0 || OLDTRX_RPL == 14 || OLDTRX_RPL == 23);
       if( OLDTRX_TO_CPIC_ARRAY[0] == 0x42 && OLDTRX_TO_CPIC_ARRAY[1] == SAT_ID && OLDTRX_TO_CPIC_ARRAY[OLDTRX_RPL] == 0xBB )     // 0x4E = "B"
       {
          fprintf(PC, "Command from ADDNICS Transceiver\n\r");
