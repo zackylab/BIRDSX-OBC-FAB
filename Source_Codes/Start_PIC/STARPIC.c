@@ -72,6 +72,7 @@ void main()
       }
       
       delay_ms(100);
+      // assert(B_2 == 0 || B_2 == 1);
       Output_Toggle(PIN_B2);            // external WDT pin toggle  
    }
 }
