@@ -26,12 +26,14 @@ char B_6, B_7 ;
 
 void Settings()
 {
-   // assert(B_6 == 0 || B_6 == 1);
+   // assert(0 <= B_6 && B_6 <= 255);
    B_6 = input(PIN_B6);
-
-   // assert(B_7 == 0 || B_7 == 1);
-   B_7 = input(PIN_B7);
+   // assert(B_6 == 0 || B_6 == 1);
    
+   // assert(0 <= B_7 && B_7 <= 255);
+   B_7 = input(PIN_B7);
+   // assert(B_7 == 0 || B_7 == 1);
+
    // assert(RSTPIC_RESTART_PIN == 0 || RSTPIC_RESTART_PIN == 1);
    OUtput_Low(RSTPIC_RESTART_PIN) ;                  // reset pic Restart pin low
    // assert(RSTPIC_RESTART_PIN == 0);
@@ -72,7 +74,7 @@ void main()
       CHECK_UART_INCOMING_FROM_NEW_TRX(0x54)  ;
       CHECK_UART_INCOMING_FROM_OLD_TRX(0x42)  ;
       
-      // seert(CW_INTERVAL == 100 || CW_INTERVAL == 125 || CW_INTERVAL == 150);
+      // aseert(CW_INTERVAL == 100 || CW_INTERVAL == 125 || CW_INTERVAL == 150);
       COMUNICATE_WITH_RSTPIC_EVERY90SEC_AND_ASK_CW_DATA_FROM_MAINPIC(CW_INTERVAL);
 
       // =====================================================================================================================================
